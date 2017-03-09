@@ -1,15 +1,16 @@
-BIO
-|-INTRO
-  |✓|-Passionate Front-End Web Developer.
-  ||-Currently studying at Athabasca University for computing science degree
-  ||-Proficient in HTML, CSS (including preprocessors), JavaScript, React, JQuery
-||-Love making games
-||-Excited to tear muscle tissue
+CONTENT
 
-MUSTS
-|-YouTube Watch List
-|-Reading List
-|-Goals List
+✚ INTRO
+  ➥ Passionate Front-End Web Developer ✔
+  ➥ Currently studying at Athabasca University for computing science degree ✔
+  ➥ Proficient in HTML, CSS (including preprocessors), JavaScript, React, JQuery ✔
+  ➥ Love making games ✔
+  ➥ Excited to tear muscle tissue
 
-SECRET
-|-Valentines Game
+✚ MUSTS
+  ➥ YouTube Watch List
+  ➥ Reading List
+  ➥ Goals List
+
+✚ SECRET
+  ➥ Valentines Game
