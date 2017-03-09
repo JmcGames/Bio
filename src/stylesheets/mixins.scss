@@ -1,0 +1,14 @@
+
+
+@mixin partialBackground( $percent: 50%, $color: lightgray ){
+    $first: ( 100% - $percent ) / 2;
+    $second: 100% - $first;
+    background-image: linear-gradient( top, 
+        $none, 
+        $none $first, 
+        $gray $first, 
+        $gray $second, 
+        $none $second, 
+        $none 100% 
+    );    
+}

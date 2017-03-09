@@ -1,0 +1,86 @@
+// Skill Styles //
+
+// nth( $list, n )
+$microsoft: #f65314, #7cbb00, #00a1f1, #ffbb00
+$google: #ea4335, #4285f4, #fbbc05, #34a853
+$highlight: lighten( black, 10% )
+
+.skills-header
+    color: $highlight
+    text-indent: 40px
+    font-size: 40px
+    border-bottom: 3px solid grey
+
+.skills
+    width: 100%
+    height: 164px
+    margin-bottom: 8%
+    display: flex
+    align-content: space-between
+
+    .tile
+        cursor: pointer
+        background-color: lightgray
+        border: 3px solid darken( lightgray, 10% )
+        border-radius: 10px
+        position: relative
+        width: 20%
+        margin: 0 2.5%
+        display: flex
+        flex-flow: column nowrap
+        justify-content: center
+        align-items: center
+        transition: .4s ease all
+        overflow: hidden
+        
+        span
+            margin: 5px
+            color: $highlight
+            font-size: 26px
+            font-weight: 900
+
+        .cover-tile
+            position: absolute
+            display: flex
+            flex-flow: column nowrap
+            justify-content: center
+            align-items: center
+            transition: .3s ease-out all
+            opacity: 0.95
+            transform: translateY( 0px )
+            .icon
+                &-html5
+                    color: #ea4335
+                &-css3
+                    color: #4285f4
+                &-javascript
+                    color: #fbbc05
+                &-game-dev
+                    color: #34a853
+        
+        
+        .inner-tile
+            position: absolute
+            display: flex
+            flex-flow: column nowrap
+            justify-content: center
+            transition: .3s ease-out all
+            opacity: 0
+            transform: translateY(160px)
+            span
+                color: $highlight
+                font-size: 22px
+                &::before
+                    content: "➥"
+            
+            
+
+        &:hover
+            .cover-tile
+                opacity: 0
+                transform: translateY(-160px)
+            .inner-tile
+                opacity: 0.95
+                transform: translateY( 0px )
+
+    
