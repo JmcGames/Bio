@@ -1,10 +1,11 @@
 {
-  "name": "Personal Website",
+  "name": "bio",
   "version": "1.0.0",
   "description": "Showcase of skills and qualifications",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server"
+    "start": "./node_modules/.bin/webpack-dev-server",
+	"wtf": "./node_modules/.bin/webpack"
   },
   "author": "Jesse McCarthy",
   "license": "MIT",

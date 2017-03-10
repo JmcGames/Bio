@@ -1,4 +1,4 @@
-import '../../stylesheets/logo.sass'
+import './Logo.sass'
 
 export default () => (
     <div className='logo'>

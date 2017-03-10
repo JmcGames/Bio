@@ -2,7 +2,7 @@ import JsIcon from 'react-icons/lib/fa/javascript'
 import FaHtml5 from 'react-icons/lib/fa/html5'
 import FaCss3 from 'react-icons/lib/fa/css3'
 import FaGamepad from 'react-icons/lib/fa/gamepad'
-import '../../stylesheets/skills.sass'
+import './Skills.sass'
 
 
 const TileContent = [
@@ -46,9 +46,9 @@ const TileContent = [
 ];
 
 export default () => (
-    <div>
-        <h1 className="skills-header">Skills and Abilities</h1> 
-        <div className="skills">
+    <div className="Skills">
+        <h1>Skills and Abilities</h1> 
+        <div className="content">
             { TileContent.map(( element, key ) => (
                 <Tile { ...element }
                     key={ key }/>

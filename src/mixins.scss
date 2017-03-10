@@ -1,14 +1,14 @@
-
+// File for mixins and multiline maps
 
 @mixin partialBackground( $percent: 50%, $color: lightgray ){
     $first: ( 100% - $percent ) / 2;
     $second: 100% - $first;
-    background-image: linear-gradient( top, 
-        $none, 
+    background-image: linear-gradient( 
+        $none 0%, 
         $none $first, 
-        $gray $first, 
-        $gray $second, 
+        $color $first, 
+        $color $second, 
         $none $second, 
         $none 100% 
-    );    
+    );
 }

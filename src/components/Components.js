@@ -1,0 +1,5 @@
+export { default as App } from './App'
+export { default as PageNotFound } from './PageNotFound'
+export { default as Bio } from './Bio/Bio'
+export { default as Contact } from './Contact/Contact'
+export { default as Likes } from './Likes/Likes'

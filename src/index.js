@@ -1,14 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
-import App from './components/App'
-import Bio from './components/Bio/Bio'
-import PageNotFound from './components/PageNotFound'
+import { App, Bio, Contact, Likes, PageNotFound } from './components/Components'
+import './index.sass'
 
 window.React = React;
-
-const Likes = () => ( <div /> );
-const Contact = () => ( <div /> );
 
 render((
 	<Router history={ hashHistory }>

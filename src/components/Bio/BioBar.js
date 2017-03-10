@@ -1,8 +1,8 @@
 import { Link } from 'react-router'
-import '../../stylesheets/bio-bar.sass'
+import './BioBar.sass'
 
 export default () => (
-    <div className='bio-bar'>
+    <div className='BioBar'>
         <img src='assets/me-smaller.png' />
         <div>Hello and welcome! I am a programmer and my name is Jesse. I am 
         obsessed with personal development, exercise for aesthetics, and above 
@@ -12,4 +12,4 @@ export default () => (
         polymorphic. If you have any inquiries please don't hesitate to 
         <Link to='contact'> contact me</Link>. </div>
     </div>
-)
+);
