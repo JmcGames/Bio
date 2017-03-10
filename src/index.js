@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import { App, Bio, Contact, Likes, PageNotFound } from './components/Components'
-import './index.sass'
+import './global.sass'
 
 window.React = React;
 
