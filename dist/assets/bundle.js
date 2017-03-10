@@ -54,39 +54,24 @@
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _App = __webpack_require__(233);
+	var _Components = __webpack_require__(233);
 
-	var _App2 = _interopRequireDefault(_App);
-
-	var _Bio = __webpack_require__(248);
-
-	var _Bio2 = _interopRequireDefault(_Bio);
-
-	var _PageNotFound = __webpack_require__(259);
-
-	var _PageNotFound2 = _interopRequireDefault(_PageNotFound);
+	__webpack_require__(269);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	window.React = _react2.default;
-
-	var Likes = function Likes() {
-		return _react2.default.createElement('div', null);
-	};
-	var Contact = function Contact() {
-		return _react2.default.createElement('div', null);
-	};
 
 	(0, _reactDom.render)(_react2.default.createElement(
 		_reactRouter.Router,
 		{ history: _reactRouter.hashHistory },
 		_react2.default.createElement(
 			_reactRouter.Route,
-			{ component: _App2.default },
-			_react2.default.createElement(_reactRouter.Route, { path: '/', component: _Bio2.default }),
-			_react2.default.createElement(_reactRouter.Route, { path: 'likes', component: Likes }),
-			_react2.default.createElement(_reactRouter.Route, { path: 'contact', component: Contact }),
-			_react2.default.createElement(_reactRouter.Route, { path: '*', component: _PageNotFound2.default })
+			{ component: _Components.App },
+			_react2.default.createElement(_reactRouter.Route, { path: '/', component: _Components.Bio }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'likes', component: _Components.Likes }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'contact', component: _Components.Contact }),
+			_react2.default.createElement(_reactRouter.Route, { path: '*', component: _Components.PageNotFound })
 		)
 	), document.getElementById('root'));
 
@@ -26563,18 +26548,73 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _App = __webpack_require__(234);
+
+	Object.defineProperty(exports, 'App', {
+	  enumerable: true,
+	  get: function get() {
+	    return _interopRequireDefault(_App).default;
+	  }
+	});
+
+	var _PageNotFound = __webpack_require__(247);
+
+	Object.defineProperty(exports, 'PageNotFound', {
+	  enumerable: true,
+	  get: function get() {
+	    return _interopRequireDefault(_PageNotFound).default;
+	  }
+	});
+
+	var _Bio = __webpack_require__(248);
+
+	Object.defineProperty(exports, 'Bio', {
+	  enumerable: true,
+	  get: function get() {
+	    return _interopRequireDefault(_Bio).default;
+	  }
+	});
+
+	var _Contact = __webpack_require__(259);
+
+	Object.defineProperty(exports, 'Contact', {
+	  enumerable: true,
+	  get: function get() {
+	    return _interopRequireDefault(_Contact).default;
+	  }
+	});
+
+	var _Likes = __webpack_require__(265);
+
+	Object.defineProperty(exports, 'Likes', {
+	  enumerable: true,
+	  get: function get() {
+	    return _interopRequireDefault(_Likes).default;
+	  }
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 
-	var _Logo = __webpack_require__(234);
+	var _Logo = __webpack_require__(235);
 
 	var _Logo2 = _interopRequireDefault(_Logo);
 
-	var _Menu = __webpack_require__(239);
+	var _Menu = __webpack_require__(240);
 
 	var _Menu2 = _interopRequireDefault(_Menu);
-
-	__webpack_require__(246);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26590,7 +26630,7 @@
 	};
 
 /***/ },
-/* 234 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26599,7 +26639,7 @@
 	    value: true
 	});
 
-	__webpack_require__(235);
+	__webpack_require__(236);
 
 	exports.default = function () {
 	    return React.createElement(
@@ -26619,23 +26659,23 @@
 	};
 
 /***/ },
-/* 235 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(236);
+	var content = __webpack_require__(237);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
+	var update = __webpack_require__(239)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/autoprefixer-loader/index.js!./../../node_modules/sass-loader/index.js!./logo.sass", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/autoprefixer-loader/index.js!./../../node_modules/sass-loader/index.js!./logo.sass");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./Logo.sass", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./Logo.sass");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -26645,21 +26685,21 @@
 	}
 
 /***/ },
-/* 236 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(237)();
+	exports = module.exports = __webpack_require__(238)();
 	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Great+Vibes|Raleway|Roboto);", ""]);
+
 
 	// module
-	exports.push([module.id, "body {\n  margin: 0;\n  padding: 0;\n  font-family: 'Roboto', sans-serif; }\n\na {\n  text-decoration: none; }\n\n.logo {\n  text-align: center;\n  margin: 0;\n  margin-bottom: 20px; }\n  .logo h1 {\n    font-family: 'Great Vibes', cursive;\n    font-size: 62px;\n    margin: 10px 0; }\n  .logo span {\n    font-family: 'Raleway', sans-serif;\n    font-weight: 600; }\n", ""]);
+	exports.push([module.id, ".logo {\n  text-align: center;\n  margin: 0;\n  margin-bottom: 20px; }\n  .logo h1 {\n    color: black;\n    font-family: 'Great Vibes', cursive;\n    font-size: 62px;\n    margin: 10px 0; }\n  .logo span {\n    color: #333333;\n    font-family: 'Raleway', sans-serif;\n    font-weight: 600; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports) {
 
 	/*
@@ -26715,7 +26755,7 @@
 
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -26967,7 +27007,7 @@
 
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26976,38 +27016,36 @@
 	    value: true
 	});
 
-	var _thumbsUp = __webpack_require__(240);
+	var _thumbsUp = __webpack_require__(241);
 
 	var _thumbsUp2 = _interopRequireDefault(_thumbsUp);
 
-	var _user = __webpack_require__(242);
+	var _user = __webpack_require__(243);
 
 	var _user2 = _interopRequireDefault(_user);
 
-	var _envelope = __webpack_require__(243);
+	var _envelope = __webpack_require__(244);
 
 	var _envelope2 = _interopRequireDefault(_envelope);
 
 	var _reactRouter = __webpack_require__(178);
 
-	__webpack_require__(244);
+	__webpack_require__(245);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = function () {
 	    return React.createElement(
 	        'div',
-	        { className: 'menu' },
+	        { className: 'Menu' },
 	        React.createElement(
 	            _reactRouter.Link,
 	            { to: '/' },
 	            React.createElement(
 	                'div',
-	                { className: 'menu-item bio' },
-	                React.createElement(_user2.default, { id: 'bio',
-	                    className: 'icon',
-	                    size: 48 }),
-	                React.createElement('span', { className: 'menu-item-text' })
+	                { className: 'item bio' },
+	                React.createElement(_user2.default, { className: 'icon',
+	                    size: 48 })
 	            )
 	        ),
 	        React.createElement(
@@ -27015,10 +27053,9 @@
 	            { to: 'likes' },
 	            React.createElement(
 	                'div',
-	                { className: 'menu-item likes' },
+	                { className: 'item likes' },
 	                React.createElement(_thumbsUp2.default, { className: 'icon',
-	                    size: 48 }),
-	                React.createElement('span', { className: 'menu-item-text' })
+	                    size: 48 })
 	            )
 	        ),
 	        React.createElement(
@@ -27026,18 +27063,17 @@
 	            { to: 'contact' },
 	            React.createElement(
 	                'div',
-	                { className: 'menu-item contact' },
+	                { className: 'item contact' },
 	                React.createElement(_envelope2.default, { id: 'contact',
 	                    className: 'icon',
-	                    size: 48 }),
-	                React.createElement('span', { className: 'menu-item-text' })
+	                    size: 48 })
 	            )
 	        )
 	    );
 	};
 
 /***/ },
-/* 240 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27052,7 +27088,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactIconBase = __webpack_require__(241);
+	var _reactIconBase = __webpack_require__(242);
 
 	var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -27074,7 +27110,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 241 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27133,7 +27169,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 242 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27148,7 +27184,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactIconBase = __webpack_require__(241);
+	var _reactIconBase = __webpack_require__(242);
 
 	var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -27170,7 +27206,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 243 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27185,7 +27221,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactIconBase = __webpack_require__(241);
+	var _reactIconBase = __webpack_require__(242);
 
 	var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -27207,23 +27243,23 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 244 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(245);
+	var content = __webpack_require__(246);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
+	var update = __webpack_require__(239)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/autoprefixer-loader/index.js!./../../node_modules/sass-loader/index.js!./menu.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/autoprefixer-loader/index.js!./../../node_modules/sass-loader/index.js!./menu.scss");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./Menu.sass", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./Menu.sass");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27231,60 +27267,38 @@
 		// When the module is disposed, remove the <style> tags
 		module.hot.dispose(function() { update(); });
 	}
-
-/***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".menu {\n  background-image: -webkit-linear-gradient(top, transparent, transparent 20%, lightgray 20%, lightgray 80%, transparent 80%, transparent 100%);\n  background-image: linear-gradient(top, transparent, transparent 20%, lightgray 20%, lightgray 80%, transparent 80%, transparent 100%);\n  margin-bottom: 8%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: distribute;\n      justify-content: space-around; }\n  .menu .menu-item {\n    border: 3px solid transparent;\n    padding: 30px;\n    text-align: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-transition: .5s ease all;\n    transition: .5s ease all;\n    -webkit-transform: scale(1.4);\n            transform: scale(1.4); }\n    .menu .menu-item .icon {\n      font-size: 64px;\n      color: #767676;\n      width: 100%;\n      margin: 5px 0;\n      -webkit-transform: scale(0.83);\n              transform: scale(0.83);\n      -webkit-transition: .5s ease all;\n      transition: .5s ease all; }\n    .menu .menu-item:hover {\n      color: darkred;\n      cursor: pointer;\n      background-color: rgba(0, 139, 139, 0.9);\n      border-radius: 20px;\n      border: 3px solid #005858;\n      -webkit-transform: scale(1);\n              transform: scale(1); }\n      .menu .menu-item:hover .icon {\n        color: darkred;\n        -webkit-transform: scale(1.2);\n                transform: scale(1.2); }\n      .menu .menu-item:hover.bio::after {\n        position: absolute;\n        left: 0;\n        top: 82px;\n        text-align: center;\n        width: 100%;\n        color: darkred;\n        font-size: 24px;\n        font-family: \"Raleway\";\n        font-weight: 900;\n        font-size: 32px;\n        content: \"Bio\"; }\n      .menu .menu-item:hover.likes::after {\n        position: absolute;\n        left: 0;\n        top: 82px;\n        text-align: center;\n        width: 100%;\n        color: darkred;\n        font-size: 24px;\n        font-family: \"Raleway\";\n        font-weight: 900;\n        font-size: 30px;\n        content: \"Likes\"; }\n      .menu .menu-item:hover.contact::after {\n        position: absolute;\n        left: 0;\n        top: 82px;\n        text-align: center;\n        width: 100%;\n        color: darkred;\n        font-size: 24px;\n        font-family: \"Raleway\";\n        font-weight: 900;\n        font-size: 24px;\n        content: \"Contact\"; }\n", ""]);
-
-	// exports
-
 
 /***/ },
 /* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(247);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/autoprefixer-loader/index.js!./../../node_modules/sass-loader/index.js!./global.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/autoprefixer-loader/index.js!./../../node_modules/sass-loader/index.js!./global.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 247 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
+	exports = module.exports = __webpack_require__(238)();
 	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Great+Vibes|Raleway|Roboto);", ""]);
+
 
 	// module
-	exports.push([module.id, "body {\n  margin: 0;\n  padding: 0;\n  font-family: 'Roboto', sans-serif; }\n\na {\n  text-decoration: none; }\n", ""]);
+	exports.push([module.id, ".Menu {\n  background-image: -webkit-linear-gradient(transparent 0%, transparent 20%, lightgray 20%, lightgray 80%, transparent 80%, transparent 100%);\n  background-image: linear-gradient(transparent 0%, transparent 20%, lightgray 20%, lightgray 80%, transparent 80%, transparent 100%);\n  margin-bottom: 5%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: distribute;\n      justify-content: space-around; }\n  .Menu .item {\n    border: 3px solid transparent;\n    padding: 30px;\n    text-align: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-transition: .5s ease all;\n    transition: .5s ease all;\n    -webkit-transform: scale(1.4);\n            transform: scale(1.4); }\n    .Menu .item .icon {\n      font-size: 64px;\n      color: #333333;\n      width: 100%;\n      margin: 5px 0;\n      -webkit-transform: scale(0.83);\n              transform: scale(0.83);\n      -webkit-transition: .5s ease all;\n      transition: .5s ease all; }\n    .Menu .item:hover {\n      color: lightgray;\n      cursor: pointer;\n      background-color: rgba(26, 26, 26, 0.9);\n      border-radius: 20px;\n      border: 3px solid black;\n      -webkit-transform: scale(1);\n              transform: scale(1); }\n      .Menu .item:hover .icon {\n        color: #bababa;\n        -webkit-transform: scale(1.2);\n                transform: scale(1.2); }\n      .Menu .item:hover.bio::after, .Menu .item:hover.likes::after, .Menu .item:hover.contact::after {\n        position: absolute;\n        top: 82px;\n        left: 0;\n        text-align: center;\n        width: 100%;\n        color: #bababa;\n        font-size: 24px;\n        font-family: \"Nunito\";\n        font-weight: 900; }\n      .Menu .item:hover.bio::after {\n        font-size: 32px;\n        content: \"Bio\"; }\n      .Menu .item:hover.likes::after {\n        font-size: 30px;\n        content: \"Likes\"; }\n      .Menu .item:hover.contact::after {\n        font-size: 24px;\n        content: \"Contact\"; }\n", ""]);
 
 	// exports
 
+
+/***/ },
+/* 247 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	exports.default = function () {
+	    return React.createElement(
+	        "h1",
+	        null,
+	        "Sorry the page requested does not exist :'("
+	    );
+	};
 
 /***/ },
 /* 248 */
@@ -27332,7 +27346,7 @@
 	exports.default = function () {
 	    return React.createElement(
 	        'div',
-	        { className: 'bio-bar' },
+	        { className: 'BioBar' },
 	        React.createElement('img', { src: 'assets/me-smaller.png' }),
 	        React.createElement(
 	            'div',
@@ -27358,14 +27372,14 @@
 	var content = __webpack_require__(251);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
+	var update = __webpack_require__(239)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/autoprefixer-loader/index.js!./../../node_modules/sass-loader/index.js!./bio-bar.sass", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/autoprefixer-loader/index.js!./../../node_modules/sass-loader/index.js!./bio-bar.sass");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./BioBar.sass", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./BioBar.sass");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27378,12 +27392,12 @@
 /* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(237)();
+	exports = module.exports = __webpack_require__(238)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".bio-bar {\n  background-color: gray;\n  box-shadow: 0 2px 5px black, 0 -2px 5px black;\n  width: 100%;\n  height: 240px;\n  margin-bottom: 8%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n  .bio-bar img {\n    margin: 0 32px; }\n  .bio-bar div {\n    font-size: 20px;\n    padding: 0 20px; }\n", ""]);
+	exports.push([module.id, ".BioBar {\n  background-color: lightgray;\n  box-shadow: 0 1px 5px;\n  width: 100%;\n  height: 240px;\n  margin-bottom: 8%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n  .BioBar img {\n    margin: 0 32px;\n    border: 3px solid #bababa;\n    border-radius: 100%;\n    -webkit-filter: drop-shadow(1px 2px 3px);\n            filter: drop-shadow(1px 2px 3px); }\n  .BioBar div {\n    font-size: 20px;\n    padding: 0 20px; }\n", ""]);
 
 	// exports
 
@@ -27441,15 +27455,15 @@
 	exports.default = function () {
 	    return React.createElement(
 	        'div',
-	        null,
+	        { className: 'Skills' },
 	        React.createElement(
 	            'h1',
-	            { className: 'skills-header' },
+	            null,
 	            'Skills and Abilities'
 	        ),
 	        React.createElement(
 	            'div',
-	            { className: 'skills' },
+	            { className: 'content' },
 	            TileContent.map(function (element, key) {
 	                return React.createElement(Tile, _extends({}, element, {
 	                    key: key }));
@@ -27467,7 +27481,8 @@
 	        { className: 'tile' },
 	        React.createElement(CoverTile, { Icon: Icon,
 	            title: title }),
-	        React.createElement(InnerTile, { children: children })
+	        React.createElement(InnerTile, { title: title,
+	            children: children })
 	    );
 	};
 
@@ -27476,22 +27491,23 @@
 	        title = _ref2.title;
 	    return React.createElement(
 	        'div',
-	        { className: 'cover-tile' },
-	        React.createElement(Icon, { className: 'icon icon-' + title.replace(' ', '-').toLowerCase(),
+	        { className: "cover-tile " + title },
+	        React.createElement(Icon, { className: 'icon icon-' + toClassName(title),
 	            size: 60 }),
 	        React.createElement(
 	            'span',
-	            null,
+	            { className: 'label' },
 	            title
 	        )
 	    );
 	};
 
 	var InnerTile = function InnerTile(_ref3) {
-	    var children = _ref3.children;
+	    var children = _ref3.children,
+	        title = _ref3.title;
 	    return React.createElement(
 	        'div',
-	        { className: 'inner-tile' },
+	        { className: "inner-tile " + toClassName(title) },
 	        children.map(function (child, id) {
 	            return React.createElement(
 	                'span',
@@ -27500,6 +27516,10 @@
 	            );
 	        })
 	    );
+	};
+
+	var toClassName = function toClassName(name) {
+	    return name.replace(' ', '-').toLowerCase();
 	};
 
 /***/ },
@@ -27518,7 +27538,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactIconBase = __webpack_require__(241);
+	var _reactIconBase = __webpack_require__(242);
 
 	var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -27555,7 +27575,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactIconBase = __webpack_require__(241);
+	var _reactIconBase = __webpack_require__(242);
 
 	var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -27592,7 +27612,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactIconBase = __webpack_require__(241);
+	var _reactIconBase = __webpack_require__(242);
 
 	var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -27629,7 +27649,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactIconBase = __webpack_require__(241);
+	var _reactIconBase = __webpack_require__(242);
 
 	var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -27660,14 +27680,14 @@
 	var content = __webpack_require__(258);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
+	var update = __webpack_require__(239)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/autoprefixer-loader/index.js!./../../node_modules/sass-loader/index.js!./skills.sass", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/autoprefixer-loader/index.js!./../../node_modules/sass-loader/index.js!./skills.sass");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./Skills.sass", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./Skills.sass");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27680,18 +27700,157 @@
 /* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(237)();
+	exports = module.exports = __webpack_require__(238)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n.skills-header {\n  color: #1a1a1a;\n  text-indent: 40px;\n  font-size: 40px;\n  border-bottom: 3px solid grey; }\n\n.skills {\n  width: 100%;\n  height: 164px;\n  margin-bottom: 8%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-line-pack: justify;\n      align-content: space-between; }\n  .skills .tile {\n    cursor: pointer;\n    background-color: lightgray;\n    border: 3px solid #bababa;\n    border-radius: 10px;\n    position: relative;\n    width: 20%;\n    margin: 0 2.5%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-flow: column nowrap;\n        flex-flow: column nowrap;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-transition: .4s ease all;\n    transition: .4s ease all;\n    overflow: hidden; }\n    .skills .tile span {\n      margin: 5px;\n      color: #1a1a1a;\n      font-size: 26px;\n      font-weight: 900; }\n    .skills .tile .cover-tile {\n      position: absolute;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -ms-flex-flow: column nowrap;\n          flex-flow: column nowrap;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      -webkit-transition: .3s ease-out all;\n      transition: .3s ease-out all;\n      opacity: 0.95;\n      -webkit-transform: translateY(0px);\n              transform: translateY(0px); }\n      .skills .tile .cover-tile .icon-html5 {\n        color: #ea4335; }\n      .skills .tile .cover-tile .icon-css3 {\n        color: #4285f4; }\n      .skills .tile .cover-tile .icon-javascript {\n        color: #fbbc05; }\n      .skills .tile .cover-tile .icon-game-dev {\n        color: #34a853; }\n    .skills .tile .inner-tile {\n      position: absolute;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -ms-flex-flow: column nowrap;\n          flex-flow: column nowrap;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-transition: .3s ease-out all;\n      transition: .3s ease-out all;\n      opacity: 0;\n      -webkit-transform: translateY(160px);\n              transform: translateY(160px); }\n      .skills .tile .inner-tile span {\n        color: #1a1a1a;\n        font-size: 22px; }\n        .skills .tile .inner-tile span::before {\n          content: \"\\27A5\"; }\n    .skills .tile:hover .cover-tile {\n      opacity: 0;\n      -webkit-transform: translateY(-160px);\n              transform: translateY(-160px); }\n    .skills .tile:hover .inner-tile {\n      opacity: 0.95;\n      -webkit-transform: translateY(0px);\n              transform: translateY(0px); }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n.Skills h1 {\n  color: #333333;\n  text-indent: 40px;\n  font-family: \"Raleway\";\n  font-size: 40px;\n  border-bottom: 3px solid #333333; }\n\n.Skills .content {\n  width: 100%;\n  height: 164px;\n  margin-bottom: 8%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-line-pack: justify;\n      align-content: space-between; }\n  .Skills .content .tile {\n    cursor: pointer;\n    background-color: lightgray;\n    box-shadow: 1px 3px 5px;\n    position: relative;\n    border: 3px solid #bababa;\n    border-radius: 10px;\n    width: 20%;\n    margin: 0 2.5%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-flow: column nowrap;\n        flex-flow: column nowrap;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-transition: .4s ease all;\n    transition: .4s ease all;\n    overflow: hidden; }\n    .Skills .content .tile .label {\n      margin: 5px;\n      color: #1a1a1a;\n      font-size: 26px;\n      font-family: \"Raleway\";\n      font-weight: 900; }\n    .Skills .content .tile .cover-tile {\n      position: absolute;\n      top: 0;\n      left: 0;\n      bottom: 0;\n      right: 0;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -ms-flex-flow: column nowrap;\n          flex-flow: column nowrap;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      -webkit-transition: .3s ease-out all;\n      transition: .3s ease-out all;\n      -webkit-transform: translateY(0px);\n              transform: translateY(0px);\n      opacity: 0.95; }\n    .Skills .content .tile .inner-tile {\n      position: absolute;\n      top: 0;\n      bottom: 0;\n      left: 0;\n      right: 0;\n      margin: auto;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -ms-flex-flow: column nowrap;\n          flex-flow: column nowrap;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-transition: .3s ease-out all;\n      transition: .3s ease-out all;\n      -webkit-transform: translateY(160px);\n              transform: translateY(160px);\n      opacity: 0; }\n      .Skills .content .tile .inner-tile span {\n        font-size: 22px; }\n        .Skills .content .tile .inner-tile span::before {\n          content: \"\\27A5\"; }\n    .Skills .content .tile:hover .cover-tile {\n      opacity: 0;\n      -webkit-transform: translateY(-160px);\n              transform: translateY(-160px); }\n    .Skills .content .tile:hover .inner-tile {\n      opacity: 0.95;\n      -webkit-transform: translateY(0px);\n              transform: translateY(0px); }\n\n.icon-html5 {\n  color: #f65314; }\n\n.icon-css3 {\n  color: #00a1f1; }\n\n.icon-javascript {\n  color: #ffbb00; }\n\n.icon-game-dev {\n  color: #7cbb00; }\n\n.inner-tile span {\n  font-family: \"Raleway\";\n  font-weight: 900; }\n\n.inner-tile.html5 span {\n  color: #cf3f08; }\n\n.inner-tile.css3 span {\n  color: #007fbe; }\n\n.inner-tile.javascript span {\n  color: #cc9600; }\n\n.inner-tile.game-dev span {\n  color: #5a8800; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _phone = __webpack_require__(260);
+
+	var _phone2 = _interopRequireDefault(_phone);
+
+	var _github = __webpack_require__(261);
+
+	var _github2 = _interopRequireDefault(_github);
+
+	var _envelope = __webpack_require__(244);
+
+	var _envelope2 = _interopRequireDefault(_envelope);
+
+	var _HOC = __webpack_require__(262);
+
+	__webpack_require__(263);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = function () {
+	    return React.createElement(
+	        'div',
+	        { className: 'contact-page' },
+	        React.createElement(
+	            'div',
+	            { className: 'header' },
+	            React.createElement(
+	                'h1',
+	                null,
+	                'Contact'
+	            ),
+	            React.createElement(
+	                'span',
+	                null,
+	                contactInfo
+	            )
+	        ),
+	        (0, _HOC.map)(services, Service)
+	    );
+	};
+
+	var contactInfo = "If you have questions feel free to contact me on any of the following services.";
+	var services = [{ Icon: _phone2.default, service: "Telephone", address: "1-587-340-6773" }, { Icon: _envelope2.default, service: "Email", address: "jessemcprescott@gmail.com" }, { Icon: _github2.default, service: "GitHub", address: "JmcGames" }];
+
+	var Service = function Service(_ref, key) {
+	    var Icon = _ref.Icon,
+	        service = _ref.service,
+	        address = _ref.address;
+	    return React.createElement(
+	        'div',
+	        { className: 'service', key: key },
+	        React.createElement(Icon, { size: 30 }),
+	        service + " at " + address
+	    );
+	};
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactIconBase = __webpack_require__(242);
+
+	var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var FaPhone = function FaPhone(props) {
+	    return _react2.default.createElement(
+	        _reactIconBase2.default,
+	        _extends({ viewBox: '0 0 40 40' }, props),
+	        _react2.default.createElement(
+	            'g',
+	            null,
+	            _react2.default.createElement('path', { d: 'm35.9 27.7q0 0.6-0.2 1.6t-0.5 1.5q-0.4 1.1-2.7 2.3-2.1 1.2-4.1 1.2-0.6 0-1.2-0.1t-1.3-0.3-1.1-0.3-1.2-0.5-1.1-0.4q-2.2-0.7-3.9-1.8-2.8-1.8-5.9-4.8t-4.8-5.9q-1.1-1.7-1.9-3.9 0-0.2-0.4-1.1t-0.4-1.3-0.3-1-0.3-1.3-0.1-1.2q0-2 1.1-4.1 1.3-2.3 2.4-2.8 0.6-0.2 1.5-0.4t1.6-0.2q0.3 0 0.5 0 0.4 0.2 1.2 1.7 0.2 0.4 0.6 1.2t0.8 1.4 0.7 1.2q0.1 0.1 0.4 0.6t0.5 0.8 0.1 0.6q0 0.5-0.6 1.1t-1.4 1.3-1.4 1.1-0.6 1.1q0 0.2 0.1 0.5t0.2 0.4 0.3 0.6 0.3 0.4q1.7 3.1 3.8 5.2t5.3 3.9q0 0 0.4 0.3t0.6 0.3 0.4 0.2 0.5 0.1q0.4 0 1-0.6t1.2-1.4 1.3-1.4 1.1-0.6q0.3 0 0.6 0.1t0.8 0.5 0.6 0.4q0.5 0.3 1.1 0.7t1.5 0.8 1.2 0.6q1.5 0.8 1.7 1.2 0 0.2 0 0.5z' })
+	        )
+	    );
+	};
+
+	exports.default = FaPhone;
+	module.exports = exports['default'];
+
+/***/ },
+/* 261 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactIconBase = __webpack_require__(242);
+
+	var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var FaGithub = function FaGithub(props) {
+	    return _react2.default.createElement(
+	        _reactIconBase2.default,
+	        _extends({ viewBox: '0 0 40 40' }, props),
+	        _react2.default.createElement(
+	            'g',
+	            null,
+	            _react2.default.createElement('path', { d: 'm20.1 2.9q4.7 0 8.6 2.3t6.3 6.2 2.3 8.6q0 5.6-3.3 10.1t-8.4 6.2q-0.6 0.1-0.9-0.2t-0.3-0.7q0 0 0-1.7t0-3q0-2.1-1.2-3.1 1.3-0.2 2.3-0.4t2.1-0.9 1.8-1.5 1.2-2.3 0.5-3.4q0-2.7-1.8-4.6 0.8-2-0.2-4.5-0.6-0.2-1.8 0.2t-2 1l-0.9 0.5q-2-0.6-4.3-0.6t-4.2 0.6q-0.4-0.2-1-0.6t-1.9-0.8-1.9-0.3q-1 2.5-0.1 4.5-1.8 1.9-1.8 4.6 0 1.9 0.5 3.4t1.1 2.3 1.8 1.5 2.1 0.9 2.3 0.4q-0.9 0.8-1.1 2.3-0.4 0.2-1 0.3t-1.3 0.1-1.4-0.5-1.3-1.4q-0.4-0.7-1-1.1t-1.1-0.6l-0.5 0q-0.5 0-0.6 0.1t-0.1 0.2 0.2 0.3 0.2 0.3l0.2 0.1q0.5 0.2 1 0.9t0.7 1.1l0.2 0.5q0.3 0.9 1 1.4t1.5 0.7 1.5 0.1 1.3-0.1l0.5 0q0 0.8 0 1.9t0 1.2q0 0.5-0.3 0.7t-0.9 0.2q-5.2-1.7-8.4-6.2t-3.3-10.1q0-4.7 2.3-8.6t6.2-6.2 8.6-2.3z m-10.6 24.6q0.1-0.2-0.2-0.3-0.2-0.1-0.2 0.1-0.1 0.1 0.1 0.2 0.2 0.2 0.3 0z m0.7 0.7q0.1-0.1-0.1-0.3-0.2-0.2-0.3-0.1-0.2 0.1 0 0.4 0.3 0.2 0.4 0z m0.7 1q0.2-0.1 0-0.4-0.2-0.3-0.4-0.1-0.2 0.1 0 0.4t0.4 0.1z m0.9 1q0.2-0.2-0.1-0.4-0.3-0.3-0.4-0.1-0.2 0.2 0 0.4 0.3 0.3 0.5 0.1z m1.3 0.5q0-0.2-0.3-0.3-0.4-0.1-0.4 0.1t0.2 0.4q0.4 0.1 0.5-0.2z m1.4 0.1q0-0.2-0.4-0.2-0.4 0-0.4 0.2 0 0.3 0.4 0.3 0.4 0 0.4-0.3z m1.3-0.2q-0.1-0.2-0.4-0.2-0.4 0.1-0.3 0.4t0.4 0.1 0.3-0.3z' })
+	        )
+	    );
+	};
+
+	exports.default = FaGithub;
+	module.exports = exports['default'];
+
+/***/ },
+/* 262 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -27699,14 +27858,273 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	// Various Higher Order Functions
+
+	var map = exports.map = function map(list, component, args) {
+	    return React.createElement(
+	        "div",
+	        null,
+	        list.map(function (item, key) {
+	            return component(item, key, args);
+	        })
+	    );
+	};
+
+/***/ },
+/* 263 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(264);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(239)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./Contact.sass", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./Contact.sass");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(238)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".contact-page {\n  background-color: lightgray;\n  border-radius: 10px;\n  border: 1px solid #bababa;\n  box-shadow: 1px 3px 5px;\n  width: 68%;\n  margin: auto;\n  margin-bottom: 5%;\n  padding: 2.5%;\n  text-align: left; }\n  .contact-page .header {\n    text-align: center;\n    margin-bottom: 10%; }\n    .contact-page .header h1 {\n      color: black;\n      font-family: \"Nunito\";\n      font-size: 48px;\n      font-weight: 900;\n      margin-bottom: 5px; }\n    .contact-page .header span {\n      color: #333333;\n      font-size: 20px;\n      font-style: italic; }\n  .contact-page .service {\n    color: #1a1a1a;\n    margin: 2.5%;\n    text-align: left;\n    font-size: 18px; }\n    .contact-page .service svg {\n      color: black;\n      margin: 0 2.5%; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 265 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _heart = __webpack_require__(266);
+
+	var _heart2 = _interopRequireDefault(_heart);
+
+	var _HOC = __webpack_require__(262);
+
+	__webpack_require__(267);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = function () {
 	    return React.createElement(
-	        "h1",
-	        null,
-	        "Sorry the page requested does not exist :'("
+	        'div',
+	        { className: 'Likes' },
+	        React.createElement(
+	            'h1',
+	            null,
+	            'Likes and Interests'
+	        ),
+	        React.createElement(
+	            'div',
+	            { className: 'tiles' },
+	            (0, _HOC.map)(content, Tile)
+	        )
 	    );
 	};
+
+	var Tile = function Tile(_ref, key) {
+	    var videoId = _ref.videoId,
+	        title = _ref.title,
+	        content = _ref.content;
+	    return React.createElement(
+	        'div',
+	        { className: 'tile', key: key },
+	        React.createElement(YtEmbed, { videoId: videoId }),
+	        React.createElement(
+	            'div',
+	            { className: 'text' },
+	            React.createElement(
+	                'a',
+	                { href: YtHref(videoId) },
+	                React.createElement(
+	                    'h2',
+	                    null,
+	                    title
+	                )
+	            ),
+	            React.createElement(
+	                'div',
+	                null,
+	                content
+	            )
+	        )
+	    );
+	};
+
+	var YtEmbed = function YtEmbed(_ref2) {
+	    var videoId = _ref2.videoId;
+	    return React.createElement('iframe', { src: "https://www.youtube.com/embed/" + videoId,
+	        allowFullScreen: true });
+	};
+
+	var YtHref = function YtHref(videoId) {
+	    return "https://www.youtube.com/watch?v=" + videoId;
+	};
+
+	var content = [{
+	    videoId: "J-bC20aAat8",
+	    title: "Immutable Data on the Front-End",
+	    content: "David Nolen with an incredible talk, as always, about the benefits of immutable\
+	            data structures for user interface development. In 2014, at the time of this presentation\
+	            immuitability was not as prevalent on the front-end as it is today. I consider myself lucky\
+	            to be in a time with open source libraries like Facebook's immutable.js and ClojureSciprt's\
+	            Mori."
+	}, {
+	    videoId: "-9ZQmX8clNU",
+	    title: "Emotional Intelligence with Tony Robbins",
+	    content: "Have you ever found yourself beaming with happiness, but wanting to be\
+	            miserable or depressed? Me neither! Emotional control is of crucial importance to live\
+	            well, and therefore it is one of my main focuses in life. I am not new to the study of\
+	            psychology, and this video is among the best I've seen on the subject."
+	}, {
+	    videoId: "1zj7M1LnJV4",
+	    title: "What If the User Was a Function?",
+	    content: "Incredible talk by André Staltz, creator of Cycle Js; a framework designed to\
+	            facilitate \"Human Computer Interactions.\" André claims, quite convincingly, that \
+	            these interactions are cycles."
+	}];
+
+/***/ },
+/* 266 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactIconBase = __webpack_require__(242);
+
+	var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var FaHeart = function FaHeart(props) {
+	    return _react2.default.createElement(
+	        _reactIconBase2.default,
+	        _extends({ viewBox: '0 0 40 40' }, props),
+	        _react2.default.createElement(
+	            'g',
+	            null,
+	            _react2.default.createElement('path', { d: 'm20 37.1q-0.6 0-1-0.4l-13.9-13.4q-0.2-0.2-0.6-0.6t-1.3-1.4-1.5-2.2-1.2-2.7-0.5-3.1q0-4.9 2.8-7.7t7.9-2.7q1.4 0 2.8 0.4t2.7 1.3 2.1 1.6 1.7 1.5q0.8-0.8 1.7-1.5t2.1-1.6 2.7-1.3 2.8-0.4q5 0 7.9 2.7t2.8 7.7q0 4.9-5.1 10l-13.9 13.4q-0.4 0.4-1 0.4z' })
+	        )
+	    );
+	};
+
+	exports.default = FaHeart;
+	module.exports = exports['default'];
+
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(268);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(239)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./Likes.sass", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./Likes.sass");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(238)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".Likes h1 {\n  color: #1a1a1a;\n  text-indent: 11%;\n  font-family: \"Raleway\";\n  font-size: 40px;\n  border-bottom: 3px solid #1a1a1a; }\n\n.Likes .tiles {\n  width: 80%;\n  margin: auto; }\n  .Likes .tiles .tile {\n    -webkit-transition: 0.3s ease all;\n    transition: 0.3s ease all;\n    background-color: lightgray;\n    border: 2px solid #bababa;\n    border-radius: 10px;\n    margin-bottom: 5%;\n    height: 246px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-flow: row nowrap;\n        flex-flow: row nowrap;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n    .Likes .tiles .tile:hover {\n      box-shadow: 1px 3px 5px;\n      -webkit-transform: scale(1.1);\n              transform: scale(1.1); }\n    .Likes .tiles .tile iframe {\n      width: 20%;\n      height: 55%;\n      margin: 5%; }\n    .Likes .tiles .tile .text {\n      width: 100%; }\n      .Likes .tiles .tile .text h2 {\n        display: inline-block;\n        color: #1a1a1a;\n        font-family: 'Nunito';\n        -webkit-transition: 0.3s ease all;\n        transition: 0.3s ease all; }\n        .Likes .tiles .tile .text h2:hover {\n          background-color: #1a1a1a;\n          color: lightgray;\n          -webkit-transform: scale(1.05);\n                  transform: scale(1.05); }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(270);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(239)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/autoprefixer-loader/index.js!./../node_modules/sass-loader/index.js!./global.sass", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/autoprefixer-loader/index.js!./../node_modules/sass-loader/index.js!./global.sass");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 270 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(238)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Great+Vibes|Raleway|Nunito);", ""]);
+
+	// module
+	exports.push([module.id, "body {\n  margin: 0;\n  padding: 0;\n  font-family: 'Raleway', sans-serif; }\n\na {\n  color: #1a1aff;\n  text-decoration: none; }\n", ""]);
+
+	// exports
+
 
 /***/ }
 /******/ ]);
