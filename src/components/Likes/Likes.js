@@ -44,17 +44,16 @@ const content = [
     {
         videoId: "-9ZQmX8clNU",
         title: "Emotional Intelligence with Tony Robbins",
-        content: "How often have you found yourself beaming with happiness, but wanting to be\
+        content: "Have you ever found yourself beaming with happiness, but wanting to be\
             miserable or depressed? Me neither! Emotional control is of crucial importance to live\
             well, and therefore it is one of my main focuses in life. I am not new to the study of\
-            psychology and emotional intelligence and this video is by far the best I've seen on\
-            the subject."
+            psychology, and this video is among the best I've seen on the subject."
     },
     {
         videoId: "1zj7M1LnJV4",
         title: "What If the User Was a Function?",
-        content: "Incredible talk by André Staltz, the creator of Cycle Js. A framework designed to\
-            facilitate \"Human Computer Interactions\" which André claims, quite convincingly, are \
-            cycles."
+        content: "Incredible talk by André Staltz, creator of Cycle Js; a framework designed to\
+            facilitate \"Human Computer Interactions.\" André claims, quite convincingly, that \
+            these interactions are cycles."
     }
 ]

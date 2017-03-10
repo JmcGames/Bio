@@ -7,11 +7,14 @@
         font-family: "Raleway"
         font-size: 40px
         border-bottom: 3px solid $dkgray
-        margin-bottom: 5%
     .tiles
         width: 80%
         margin: auto
         .tile
+            transition: 0.3s ease all
+            &:hover
+                box-shadow: 1px 3px 5px
+                transform: scale( 1.1 )
             background-color: lightgray
             border: 2px solid $gray
             border-radius: 10px
@@ -27,5 +30,11 @@
             .text
                 width: 100%
                 h2
+                    &:hover
+                        background-color: $dkgray
+                        color: $ltgray
+                        transform: scale( 1.05 )
+                    display: inline-block
                     color: $dkgray
                     font-family: 'Nunito'
+                    transition: 0.3s ease all

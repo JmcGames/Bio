@@ -1,17 +1,15 @@
 // Skill Styles //
 
-// nth( $list, n )
-$microsoft: #f65314, #00a1f1, #ffbb00, #7cbb00  
-$google: #ea4335, #4285f4, #fbbc05, #34a853
-$highlight: lighten( black, 10% )
+@import '../../colors.sass'
+@import '../../mixins.scss'
 
 .Skills
     h1
-        color: $highlight
+        color: $mid-dkgray
         text-indent: 40px
         font-family: "Raleway"
         font-size: 40px
-        border-bottom: 3px solid grey
+        border-bottom: 3px solid $mid-dkgray
     .content
         width: 100%
         height: 164px
@@ -20,10 +18,11 @@ $highlight: lighten( black, 10% )
         align-content: space-between
         .tile
             cursor: pointer
-            background-color: lightgray
-            border: 3px solid darken( lightgray, 10% )
-            border-radius: 10px
+            background-color: $ltgray
+            box-shadow: 1px 3px 5px
             position: relative
+            border: 3px solid $gray
+            border-radius: 10px
             width: 20%
             margin: 0 2.5%
             display: flex
@@ -32,40 +31,36 @@ $highlight: lighten( black, 10% )
             align-items: center
             transition: .4s ease all
             overflow: hidden
-            span
+            .label
                 margin: 5px
-                color: $highlight
+                color: $dkgray
                 font-size: 26px
                 font-family: "Raleway"
                 font-weight: 900
             .cover-tile
                 position: absolute
+                top: 0
+                left: 0
+                bottom: 0
+                right: 0
                 display: flex
                 flex-flow: column nowrap
                 justify-content: center
                 align-items: center
                 transition: .3s ease-out all
-                opacity: 0.95
                 transform: translateY( 0px )
-                .icon
-                    &-html5
-                        color: nth( $microsoft, 1 )
-                    &-css3
-                        color: nth( $microsoft, 2 )
-                    &-javascript
-                        color: nth( $microsoft, 3 )
-                    &-game-dev
-                        color: nth( $microsoft, 4 )
+                opacity: 0.95
             .inner-tile
                 position: absolute
+                @include zero()
+                margin: auto
                 display: flex
                 flex-flow: column nowrap
                 justify-content: center
                 transition: .3s ease-out all
-                opacity: 0
                 transform: translateY(160px)
+                opacity: 0
                 span
-                    color: $highlight
                     font-size: 22px
                     &::before
                         content: "➥"
@@ -75,4 +70,26 @@ $highlight: lighten( black, 10% )
                     transform: translateY(-160px)
                 .inner-tile
                     opacity: 0.95
-                    transform: translateY( 0px )    
+                    transform: translateY( 0px )
+// --- Colors --- //
+.icon
+    &-html5
+        color: nth( $microsoft, 1 )
+    &-css3
+        color: nth( $microsoft, 2 )
+    &-javascript
+        color: nth( $microsoft, 3 )
+    &-game-dev
+        color: nth( $microsoft, 4 )
+.inner-tile
+    span
+        font-family: "Raleway"
+        font-weight: 900
+    &.html5 span
+        color: darken( nth( $microsoft, 1 ), 10% ) 
+    &.css3 span
+        color: darken( nth( $microsoft, 2 ), 10% ) 
+    &.javascript span
+        color: darken( nth( $microsoft, 3 ), 10% ) 
+    &.game-dev span
+        color: darken( nth( $microsoft, 4 ), 10% ) 

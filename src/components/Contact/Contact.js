@@ -14,7 +14,7 @@ export default () => (
     </div>
 );
 
-const contactInfo = "If have any questions on any subject feel free to contact me on any or all of the following services.";
+const contactInfo = "If you have questions feel free to contact me on any of the following services.";
 const services = [
     { Icon: FaPhone, service: "Telephone", address: "1-587-340-6773" },
     { Icon: FaEnvelope, service: "Email", address: "jessemcprescott@gmail.com" },

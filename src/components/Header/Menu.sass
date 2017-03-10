@@ -1,20 +1,16 @@
 // MENU STYLES //
 
+@import '../../colors.sass'
 @import '../../mixins.scss'
 
-$none: transparent
-$bg: white
-$dkgray: darken( lightgray, 30% )
-$gray: lightgray
-$burg: complement( darkcyan )
 
 .Menu 
-    @include partialBackground( 60%, lightgray )
+    @include partialBackground( 60%, $ltgray )
     margin-bottom: 5%
     display: flex
     justify-content: space-around
     .item 
-        border: 3px solid transparent
+        border: 3px solid $none
         padding: 30px
         text-align: center
         display: flex
@@ -24,20 +20,20 @@ $burg: complement( darkcyan )
         transform: scale( 1.4 )
         .icon 
             font-size: 64px
-            color: darken( darkgray, 20% )
+            color: $mid-dkgray
             width: 100%
             margin: 5px 0
             transform: scale( 0.83 )
             transition: .5s ease all
         &:hover
-            color: complement( darkcyan )
+            color: $ltgray
             cursor: pointer
-            background-color: transparentize(darkcyan, 0.1)
+            background-color: transparentize( $dkgray, 0.1 )
             border-radius: 20px
-            border: 3px solid darken( darkcyan, 10% )
+            border: 3px solid black
             transform: scale( 1 )
             .icon
-                color: complement( darkcyan )
+                color: $gray
                 transform: scale( 1.2 )
             &.bio::after, &.likes::after, &.contact::after
                 position: absolute
@@ -45,7 +41,7 @@ $burg: complement( darkcyan )
                 left: 0
                 text-align: center
                 width: 100%
-                color: $burg
+                color: $gray
                 font-size: 24px
                 font-family: "Nunito"
                 font-weight: 900

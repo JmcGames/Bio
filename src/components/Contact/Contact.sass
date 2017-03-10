@@ -1,7 +1,9 @@
+@import '../../colors.sass'
+
 .contact-page
-    background-color: lightgray
+    background-color: $ltgray
     border-radius: 10px
-    border: 1px solid darken( lightgray, 10% )
+    border: 1px solid $gray
     box-shadow: 1px 3px 5px
     width: 68%
     margin: auto
@@ -12,16 +14,20 @@
         text-align: center
         margin-bottom: 10%
         h1
+            color: $black
             font-family: "Nunito"
             font-size: 48px
             font-weight: 900
-            margin-bottom: 10px
+            margin-bottom: 5px
         span
+            color: $mid-dkgray
             font-size: 20px
             font-style: italic
     .service
+        color: $dkgray
         margin: 2.5%
         text-align: left
         font-size: 18px
         svg
+            color: $black
             margin: 0 2.5%

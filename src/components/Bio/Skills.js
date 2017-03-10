@@ -61,22 +61,25 @@ const Tile = ({Icon, title, children}) => (
     <div className="tile">
         <CoverTile Icon={ Icon }
             title={ title }/>
-        <InnerTile children={ children }/>
+        <InnerTile title={ title } 
+            children={ children }/>
     </div>
 );
 
 const CoverTile = ({ Icon, title }) => (
-    <div className="cover-tile">
-        <Icon className={ 'icon icon-' + title.replace( ' ', '-' ).toLowerCase() }
+    <div className={"cover-tile " + title}>
+        <Icon className={ 'icon icon-' + toClassName( title )}
             size={ 60 }/>
-        <span>{ title }</span>
+        <span className="label">{ title }</span>
     </div>
 );
 
-const InnerTile = ({children}) => (
-    <div className="inner-tile">
+const InnerTile = ({children, title}) => (
+    <div className={ "inner-tile " + toClassName( title )}>
         { children.map(( child, id ) => ( 
             <span key={ id }>{ child }</span>
         ))}
     </div>
 );
+
+const toClassName = name => name.replace( ' ', '-' ).toLowerCase();
