@@ -4,7 +4,8 @@
   "description": "Showcase of skills and qualifications",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server"
+    "pack": "./node_modules/.bin/webpack",
+	"start": "./node_modules/.bin/webpack-dev-server"
   },
   "author": "Jesse McCarthy",
   "license": "MIT",
